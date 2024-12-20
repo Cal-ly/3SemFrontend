@@ -1,6 +1,19 @@
 <template>
   <div>
-    <h1>Participants</h1>
+    <h1 style="text-decoration: underline;">Participants</h1>
+    <div style="max-width: 75vw; max-width: 600px; margin: auto; text-align: left;">
+        <p>Al søgning og filtrering foregår Frontend i JavaScript af følgende grunde:</p>
+        <ul>
+            <li>Responsivitet: Øjeblikkelig søgning og filtrering uden serverrespons.</li>
+            <li>Reduceret serverbelastning: Færre forespørgsler til serveren.</li>
+            <li>Båndbreddebesparelse: Undgår gentagne dataoverførsler.</li>
+            <li>Offline funktionalitet: Søgning og filtrering kan ske offline.</li>
+            <li>Forbedret brugeroplevelse: Flydende og interaktiv grænseflade.</li>
+            <li>Mindre serverkompleksitet: Forenklet serverkode.</li>
+            <li>Skalérbarhed: Udnytter klientens ressourcer.</li>
+            <li>Brugertilpasning: Personlig oplevelse uden at påvirke andre brugere.</li>
+        </ul>
+    </div>
     <div class="mb-3" style="max-width: 75vw; max-width: 600px; margin: auto;">
       <input v-model="searchQuery" placeholder="Search participants" class="form-control" />
     </div>
@@ -41,12 +54,14 @@
     </ul>
 
     <h2>Add Participant</h2>
-    <form @submit.prevent="addParticipant">
-      <input v-model="newParticipant.name" placeholder="Name" required class="form-control mb-2" />
-      <input v-model="newParticipant.age" placeholder="Age" required class="form-control mb-2" />
-      <input v-model="newParticipant.country" placeholder="Country" required class="form-control mb-2" />
-      <button type="submit" class="btn btn-primary">Add</button>
-    </form>
+    <div class="mb-3" style="max-width: 75vw; max-width: 600px; margin: auto;">
+        <form @submit.prevent="addParticipant">
+        <input v-model="newParticipant.name" placeholder="Name" required class="form-control mb-2" />
+        <input v-model="newParticipant.age" placeholder="Age" required class="form-control mb-2" />
+        <input v-model="newParticipant.country" placeholder="Country" required class="form-control mb-2" />
+        <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
   </div>
 </template>
 
@@ -54,7 +69,7 @@
 import axios from 'axios';
 
 export default {
-  name: "ParticipantControl",
+  name: "ParticipantMaster",
   data() {
     return {
       participants: [],

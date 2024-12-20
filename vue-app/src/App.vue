@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld2 />
-    <ParticipantControl />
+    <ParticipantMaster />
   </div>
 </template>
 
 <script>
-import HelloWorld2 from "./components/HelloWorld2.vue";
-import ParticipantControl from "./components/ParticipantControl.vue";
+import ParticipantMaster from "./components/ParticipantMaster.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld2,
-    ParticipantControl,
+    ParticipantMaster,
   },
 };
 </script>
