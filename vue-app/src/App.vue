@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <HelloWorld2 />
-    <AxiosExample />
+    <ParticipantControl />
   </div>
 </template>
 
 <script>
 import HelloWorld2 from "./components/HelloWorld2.vue";
-import AxiosExample from "./components/AxiosExample.vue";
+import ParticipantControl from "./components/ParticipantControl.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld2,
-    AxiosExample,
+    ParticipantControl,
   },
 };
 </script>

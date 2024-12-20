@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -13,5 +14,54 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+  </hr>
+    <div class="container mt-5">
+      <div class="encryption-info">
+        <h1 class="text-center mb-4">Kryptering</h1>
+        <section class="mb-4">
+          <h2>Formålene med kryptering</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Fortrolighed:</strong> Beskytter data mod uautoriseret adgang.</li>
+            <li class="list-group-item"><strong>Integritet:</strong> Sikrer, at data ikke ændres uden detektion.</li>
+            <li class="list-group-item"><strong>Autenticitet:</strong> Bekræfter identiteten af kommunikerende parter.</li>
+            <li class="list-group-item"><strong>Tilgængelighed:</strong> Garanterer, at data kan gendannes af autoriserede brugere.</li>
+          </ul>
+        </section>
+        <section class="mb-4">
+          <h2>Symmetrisk Kryptering</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Beskrivelse:</strong> Bruger én nøgle til både kryptering og dekryptering.</li>
+            <li class="list-group-item"><strong>Fordele:</strong> Hurtig og effektiv, især til store datamængder.</li>
+            <li class="list-group-item"><strong>Ulemper:</strong> Sikker deling af nøgle er kritisk.</li>
+            <li class="list-group-item"><strong>Eksempler:</strong> AES, DES.</li>
+            <li class="list-group-item"><strong>Anvendelse:</strong> Diskkryptering, netværksprotokoller som WPA2.</li>
+          </ul>
+        </section>
+        <section class="mb-4">
+          <h2>Asymmetrisk Kryptering</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Beskrivelse:</strong> Bruger et nøglepar: en offentlig nøgle til kryptering og en privat nøgle til dekryptering.</li>
+            <li class="list-group-item"><strong>Fordele:</strong> Løser nøgleudvekslingsproblemer, muliggør digitale signaturer.</li>
+            <li class="list-group-item"><strong>Ulemper:</strong> Langsommere og kræver mere computerkraft.</li>
+            <li class="list-group-item"><strong>Eksempler:</strong> RSA, ECC.</li>
+            <li class="list-group-item"><strong>Anvendelse:</strong> Sikker nøgleudveksling (TLS/SSL), digitale signaturer.</li>
+          </ul>
+        </section>
+        <section class="mb-4">
+          <h2>Kombination af Symmetrisk og Asymmetrisk Kryptering</h2>
+          <p>
+            Mange systemer bruger asymmetrisk kryptering til nøgleudveksling og derefter symmetrisk kryptering
+            til selve datatransmissionen. Eksempel: HTTPS.
+          </p>
+        </section>
+        <section class="mb-4">
+          <h2>HTTPS og Kryptering</h2>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Hvordan det virker:</strong> HTTPS kombinerer symmetrisk og asymmetrisk kryptering.</li>
+            <li class="list-group-item"><strong>Sikkerhed:</strong> Garanterer fortrolighed, autenticitet og integritet.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
